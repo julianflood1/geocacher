@@ -32,8 +32,8 @@ export class AddGeoSiteComponent {
     });
   }
 
-  saveItemLocation(lat, lng, creator){
-    this.geoSiteLocation.saveAddressInfo(lat, lng, creator);
-    alert("This address been saved to the database!")
-  }
+  // saveItemLocation(lat, lng, creator){
+  //   this.geoSiteLocation.saveAddressInfo(lat, lng, creator);
+  //   alert("This address been saved to the database!")
+  // }
 }
