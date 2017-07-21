@@ -11,19 +11,29 @@ import { GeoSiteLocationService } from '../geo-site-location.service';
 })
 export class AddGeoSiteComponent {
 
-  address: any[]=null;
+  getAddress: any[]=null;
+  getCoordinates: any[]=null;
+
   constructor(private router: Router, private geoSiteLocation: GeoSiteLocationService) { }
 
 
 
   getPhysicalAddress(lat: string, lng: string){
-    console.log(lat)
     this.geoSiteLocation.getPhysicalAddress(lat, lng).subscribe(response => {
-      this.address = response.json();
-      console.log('hello');
-      console.log(this.address);
+      this.getAddress = response.json();
+      console.log(this.getAddress)
     });
   }
 
+  getGpsCoordinates(address: string){
+    this.geoSiteLocation.getGpsCoordinates(address).subscribe(response => {
+      this.getCoordinates = response.json();
+      console.log(this.getCoordinates)
+    });
+  }
 
+  // saveAddress(lat, lng, creator){
+  //   this.geoSiteLocation.saveAddressInfo(lat, lng, creator);
+  //   alert("This address been saved to the database!")
+  // }
 }

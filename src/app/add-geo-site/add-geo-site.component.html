@@ -1,6 +1,12 @@
 <h1>Find Geocache Site!</h1>
 
 <form>
+  <h2>Add Your Name</h2>
+    <div class="form-group">
+      <label for="creator">Enter a Name</label>
+      <input name="creator" #creator>
+    </div>
+  <h2>Add GPS Coordinates</h2>
   <div class="form-group">
     <label for="lat">Enter a Latitude</label>
     <input name="lat" #lat>
@@ -10,8 +16,26 @@
     <input name="lng" #lng>
   </div>
   <button (click)="getPhysicalAddress(lat.value, lng.value)">Get Physical Address</button>
+  <button (click)="saveAddress(lat.value, lng.value)">Save Physical Address</button>
 </form>
 
-<div *ngIf="address">
-  <app-address-list [childAddress]="address"></app-address-list>
-</div>
+<h1>OR</h1>
+
+<form>
+  <h2>Add Your Name</h2>
+    <div class="form-group">
+      <label for="creator">Enter a Name</label>
+      <input name="creator" #creator>
+    </div>
+  <h2>Add Address</h2>
+  <div class="form-group">
+    <label for="address">Enter an Address</label>
+    <input name="address" #address>
+  </div>
+
+  <button (click)="getGpsCoordinates(address.value)">Get GPS Coordinates</button>
+  <button (click)="saveCoordinates(address.value)">Save GPS Coordinates</button>
+</form>
+
+
+<app-address-list [childGetAddress]="getAddress" [childGetCoordinates]="getCoordinates"></app-address-list>

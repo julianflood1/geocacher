@@ -7,7 +7,9 @@ import { Component, Input } from '@angular/core';
   providers: []
 })
 export class AddressListComponent {
-  @Input() childAddress
+  @Input() childGetAddress
+  @Input() childGetCoordinates
+
   constructor() { }
 
 
