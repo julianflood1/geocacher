@@ -1,0 +1,17 @@
+<h1>Find Geocache Site!</h1>
+
+<form>
+  <div class="form-group">
+    <label for="lat">Enter a Latitude</label>
+    <input name="lat" #lat>
+  </div>
+  <div class="form-group">
+    <label for="lng">Enter a Longitude</label>
+    <input name="lng" #lng>
+  </div>
+  <button (click)="getPhysicalAddress(lat.value, lng.value)">Get Physical Address</button>
+</form>
+
+<div *ngIf="address">
+  <app-address-list [childAddress]="address"></app-address-list>
+</div>
