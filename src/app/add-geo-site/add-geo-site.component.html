@@ -15,8 +15,8 @@
     <label for="lng">Enter a Longitude</label>
     <input name="lng" #lng>
   </div>
-  <button (click)="getPhysicalAddress(lat.value, lng.value)">Get Physical Address</button>
-  <button (click)="saveAddress(lat.value, lng.value)">Save Physical Address</button>
+  <button (click)="getPhysicalAddress(lat.value, lng.value, creator.value)">Get Physical Address</button>
+  <button (click)="saveAddress(lat.value, lng.value, creator.value)">Save Physical Address</button>
 </form>
 
 <h1>OR</h1>
@@ -33,8 +33,8 @@
     <input name="address" #address>
   </div>
 
-  <button (click)="getGpsCoordinates(address.value)">Get GPS Coordinates</button>
-  <button (click)="saveCoordinates(address.value)">Save GPS Coordinates</button>
+  <button (click)="getGpsCoordinates(address.value, creator.value)">Get GPS Coordinates</button>
+  <button (click)="saveCoordinates(address.value, creator.value)">Save GPS Coordinates</button>
 </form>
 
 

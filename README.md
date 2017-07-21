@@ -1,28 +1,59 @@
-# Geocacher
+_Geocacher_
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.1.
+#### _A geocacher project for Epicodus, July 21st 2017_
 
-## Development server
+#### By _**Julian Flood**_
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
 
-## Code scaffolding
+This website allows people to add geographic items and the coordinates to get to them. They can also see other past items to search for as well.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+https://github.com/julianflood1/geocacher
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Required Features
 
-## Running unit tests
++ User must be able to add items
++ User must be able to view other items to find
++ User must be able to view details of items
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Future features
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
++ Implemented map for items selected
++ More elaborate styling implemented.
 
-## Further help
+## Setup/Installation Requirements
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
++ Clone the repository
++ Make account with google to obtain API credentials
++ Make account with firebase to obtain API credentials
++ Insert your personal API credentials in project to Serve
++ Run ng serve
++ Run npm install
++ Run bower install
+
+
+
+## Known Bugs
+
+_No known bugs._
+
+## Support and contact details
+
+_Email me at julianflood@gmail.com if you run into any issues_
+
+## Technologies Used
+
+_HTML, CSS, JavaScript, TypeScript, Angular 2_
+
+# AngularProject
+
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
+
+
+### License
+
+*MIT*
+
+Copyright (c) 2017 **_Julian Flood_**
