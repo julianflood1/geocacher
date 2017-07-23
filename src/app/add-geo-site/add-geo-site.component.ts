@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Router } from '@angular/router';
 import { GeoSiteLocationService } from '../geo-site-location.service';
+import { Item } from '../item.model';
 
 @Component({
   selector: 'app-add-geo-site',
@@ -16,24 +17,17 @@ export class AddGeoSiteComponent {
 
   constructor(private router: Router, private geoSiteLocation: GeoSiteLocationService) { }
 
+  getPhysicalAddress(lat: string, lng: string, creator: string){
+    let newItem: Item = new Item(creator, lat, lng);
+    this.geoSiteLocation.addItem(newItem);
+    alert('this item has been added to your list of geocaches!');
+  };
 
 
-  getPhysicalAddress(lat: string, lng: string){
-    this.geoSiteLocation.getPhysicalAddress(lat, lng).subscribe(response => {
-      this.getAddress = response.json();
-      console.log(this.getAddress)
-    });
-  }
 
-  getGpsCoordinates(address: string){
-    this.geoSiteLocation.getGpsCoordinates(address).subscribe(response => {
-      this.getCoordinates = response.json();
-      console.log(this.getCoordinates)
-    });
-  }
-
-  // saveItemLocation(lat, lng, creator){
-  //   this.geoSiteLocation.saveAddressInfo(lat, lng, creator);
-  //   alert("This address been saved to the database!")
-  // }
 }
+  // getPhysicalAddress(lat: string, lng: string){
+  //   this.geoSiteLocation.getPhysicalAddress(lat, lng).subscribe(response => {
+  //     this.getAddress = response.json();
+  //     console.log(this.getAddress)
+  //   });
