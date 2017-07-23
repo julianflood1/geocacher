@@ -1,7 +1,13 @@
-<div *ngIf="childGetAddress">
+<h2>Save Your Geocache!</h2>
+<input #creator>
+<p>Street Address - {{childLocations.results[0].formatted_address}}</p>
+<p>Coordinates - Latitude: {{childLocations.results[0].geometry.location.lat}} | Longitude: {{childLocations.results[0].geometry.location.lng}}</p>
+<button (click)="saveCache(creator.value, childLocations.results[0].formatted_address, childLocations.results[0].geometry.location.lat, childLocations.results[0].geometry.location.lng)">Save Cache</button>
+
+<!-- <div *ngFor="let item of items | async" class="panel panel-default">
     <h1>Address' from Coordinates</h1>
     <h2>{{childGetAddress.results[0].formatted_address}}</h2>
-</div>
+</div> -->
 <!-- <div *ngIf="childGetCoordinates">
     <h1>Coordinates from Address</h1>
     <h2>Latitude: {{childGetCoordinates.results[0].geometry.location.lat}}</h2>

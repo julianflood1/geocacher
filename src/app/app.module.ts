@@ -9,6 +9,7 @@ import { AddressListComponent } from './address-list/address-list.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { CacheListingsComponent } from './cache-listings/cache-listings.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -23,7 +24,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     AddGeoSiteComponent,
-    AddressListComponent
+    AddressListComponent,
+    CacheListingsComponent
   ],
   imports: [
     BrowserModule,

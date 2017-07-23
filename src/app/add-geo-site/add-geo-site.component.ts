@@ -12,22 +12,15 @@ import { Item } from '../item.model';
 })
 export class AddGeoSiteComponent {
 
-  getAddress: any[]=null;
-  getCoordinates: any[]=null;
+  locations: any[]=null;
+  // getCoordinates: any[]=null;
 
   constructor(private router: Router, private geoSiteLocation: GeoSiteLocationService) { }
 
-  getPhysicalAddress(lat: string, lng: string, creator: string){
-    let newItem: Item = new Item(creator, lat, lng);
-    this.geoSiteLocation.addItem(newItem);
-    alert('this item has been added to your list of geocaches!');
-  };
-
-
-
+  getPhysicalAddress(creator: string, lat: string, lng: string){
+    this.geoSiteLocation.getPhysicalAddress(lat, lng).subscribe(response => {
+    this.locations = response.json();
+    console.log(this.locations)
+  });
 }
-  // getPhysicalAddress(lat: string, lng: string){
-  //   this.geoSiteLocation.getPhysicalAddress(lat, lng).subscribe(response => {
-  //     this.getAddress = response.json();
-  //     console.log(this.getAddress)
-  //   });
+  }

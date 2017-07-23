@@ -19,11 +19,11 @@
     <input name="lng" #lng>
   </div>
 
-  <button (click)="getPhysicalAddress(lat.value, lng.value, creator.value)">Get Physical Address</button>
-  <!-- <button (click)="saveAddress(lat.value, lng.value, creator.value)">Save Physical Address</button> -->
+  <button (click)="getPhysicalAddress(creator.value, lat.value, lng.value)">Get Physical Address</button>
+  <!-- <button (click)="saveAddress(creator.value, childLocations.results[0].formatted_address, childLocations.results[0].geometry.location.lat, childLocations.results[0].geometry.location.lng)">Save Physical Address</button> -->
 </form>
 
 
-
-
-<app-address-list [childGetAddress]="getAddress" [childGetCoordinates]="getCoordinates"></app-address-list>
+<div *ngIf="locations">
+  <app-address-list [childLocations]="locations"></app-address-list>
+</div>
