@@ -1,6 +1,9 @@
 <a routerLink='' class="navigation">Back to Search Page</a>
 
+
 <div *ngFor="let item of savedItems | async">
-  <p>Cache creator: {{item.creator}}</p>
-  <button (click)="goToDetailPage(item)">See Details</button>
+  <div class="well">
+    <p>Geocache creator: <b>{{item.creator}}</b></p>
+    <button (click)="goToDetailPage(item)">See Details</button>
+  </div>
 </div>

@@ -18,7 +18,7 @@ export class AddressListComponent {
   constructor(private router: Router, private geoSiteLocation: GeoSiteLocationService) { }
 
 
-saveCache(creator: string, address: string, lat: string, long: string) {
+saveGeocache(creator: string, address: string, lat: string, long: string) {
   let newItem: Item = new Item(creator, address, lat, long);
   this.geoSiteLocation.addItem(newItem);
   alert('This cache has been added to your list of geocaches.');

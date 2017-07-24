@@ -13,14 +13,20 @@ import { Item } from '../item.model';
 export class AddGeoSiteComponent {
 
   locations: any[]=null;
-  // getCoordinates: any[]=null;
 
   constructor(private router: Router, private geoSiteLocation: GeoSiteLocationService) { }
 
-  getPhysicalAddress(creator: string, lat: string, lng: string){
+  getPhysicalAddress(lat: string, lng: string){
     this.geoSiteLocation.getPhysicalAddress(lat, lng).subscribe(response => {
     this.locations = response.json();
     console.log(this.locations)
   });
 }
-  }
+  getCoordinates(streetAddress: string, city: string, state: string){
+    this.geoSiteLocation.getCoordinates(streetAddress, city, state).subscribe(response => {
+    this.locations = response.json();
+    console.log(this.locations)
+  });
+}
+
+}

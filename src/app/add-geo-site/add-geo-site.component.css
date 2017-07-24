@@ -1,0 +1,14 @@
+#main {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 100px;
+}
+#main-link {
+  font-size: 30px;
+  color: black;
+  text-decoration: underline;
+}

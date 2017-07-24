@@ -1,31 +1,47 @@
-<h1>Find Geocache Site!</h1>
 
-<form>
-  <h2>Add Your Name</h2>
+<h1>Add Geocache Site!</h1>
+<div id="main">
+  <form>
+    <div class="panel-body">
+      <h3>Add GPS Coordinates</h3>
+      <div class="form-group">
+        <label for="lat">Enter a Latitude</label>
+        <input name="lat" #lat>
+      </div>
 
-    <div class="form-group">
-      <label for="creator">Enter a Name</label>
-      <input name="creator" #creator>
+      <div class="form-group">
+        <label for="lng">Enter a Longitude</label>
+        <input name="lng" #lng>
+      </div>
+
+      <button (click)="getPhysicalAddress(lat.value, lng.value)">Get Physical Address</button>
     </div>
+  </form>
 
-  <h2>Add GPS Coordinates</h2>
-  <div class="form-group">
-    <label for="lat">Enter a Latitude</label>
-    <input name="lat" #lat>
-  </div>
+  <h2>OR</h2>
+  <form>
+    <div class="panel-body">
+      <h3>Add With a Physical Address</h3>
+      <div class="form-group">
+         <label for="streetAddress">Street Adress</label>
+         <input #address>
+       </div>
+     <div class="form-group">
+       <label for="city">City</label>
+       <input #city>
+     </div>
+     <div class="form-group">
+       <label>State</label>
+       <input #state>
+     </div>
+     <button (click)="getCoordinates(address.value, city.value, state.value)">Get GPS Coordinates</button>
+   </div>
+  </form>
+</div>
 
-  <div class="form-group">
-    <label for="lng">Enter a Longitude</label>
-    <input name="lng" #lng>
-  </div>
-
-  <button (click)="getPhysicalAddress(creator.value, lat.value, lng.value)">Get Physical Address</button>
-  <!-- <button (click)="saveAddress(creator.value, childLocations.results[0].formatted_address, childLocations.results[0].geometry.location.lat, childLocations.results[0].geometry.location.lng)">Save Physical Address</button> -->
-</form>
-
-<a routerLink="items">View Listed Geocahces!</a>
+<a id="main-link" routerLink="items">View Listed Geocaches!</a>
 
 
 <div *ngIf="locations">
-  <app-address-list [childLocations]="locations"></app-address-list>
+<app-address-list [childLocations]="locations"></app-address-list>
 </div>
