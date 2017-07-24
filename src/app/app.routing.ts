@@ -2,6 +2,7 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddGeoSiteComponent } from './add-geo-site/add-geo-site.component';
 import { CacheListingsComponent } from './cache-listings/cache-listings.component';
+import { DetailComponent } from './detail/detail.component';
 
 const appRoutes: Routes = [
   {
@@ -9,8 +10,12 @@ const appRoutes: Routes = [
     component: AddGeoSiteComponent
   },
   {
-    path: 'app-cache-listings',
+    path: 'items',
     component: CacheListingsComponent
+  },
+  {
+    path: 'items/:id',
+    component: DetailComponent
   }
 
 ];

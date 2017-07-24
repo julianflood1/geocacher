@@ -20,4 +20,9 @@ export class CacheListingsComponent implements OnInit {
     this.savedItems = this.geoSiteLocation.getItems();
   }
 
+  
+  goToDetailPage(clickedItem) {
+    this.router.navigate(['items', clickedItem.$key]);
+  }
+
 }

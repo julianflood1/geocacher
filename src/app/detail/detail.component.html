@@ -1,0 +1,6 @@
+<h2>Creator - {{(itemToDisplay | async)?.creator}}</h2>
+<p>Street Address - {{(itemToDisplay | async)?.address}}</p>
+<p>Coordinates - Latitude: {{(itemToDisplay | async)?.lat}} | Longitude: {{(itemToDisplay | async)?.lng}}</p>
+
+<a routerLink=''>Back to Home Page</a>
+<a routerLink='/items'>Back to List Page</a>
