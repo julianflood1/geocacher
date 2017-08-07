@@ -1,4 +1,4 @@
-_Geocacher_
+# _Geocacher_
 
 #### _A geocacher project for Epicodus, July 21st 2017_
 
@@ -6,32 +6,37 @@ _Geocacher_
 
 ## Description
 
-This website allows people to add geographic items and the coordinates to get to them. They can also see other past items to search for as well.
+This website allows people to add geocache sites and the coordinates to get to them. They can also see other past cache sites to search for as well.
+
+![screen shot 2017-08-07 at 2 17 51 pm](https://user-images.githubusercontent.com/24885660/29046227-5916aa56-7b7b-11e7-9896-5677b1694222.png)
+
 
 https://github.com/julianflood1/geocacher
 
 
 ## Required Features
 
-+ User must be able to add items
-+ User must be able to view other items to find
-+ User must be able to view details of items
++ User must be able to add geocache sites
++ User must be able to view other geocache sites to find
++ User must be able to view details of geocache posts
 
 
 ## Future features
 
 + Implemented map for items selected
-+ More elaborate styling implemented.
++ More elaborate styling implemented
++ Authentication required for user to edit/delete elements
 
 ## Setup/Installation Requirements
 
 + Clone the repository
 + Make account with google to obtain API credentials
 + Make account with firebase to obtain API credentials
-+ Insert your personal API credentials in project to Serve
-+ Run ng serve
-+ Run npm install
-+ Run bower install
++ Insert your personal API credentials in project
++ Run <code> npm install </code>
++ Run <code> bower install </code>
++ Run <code> ng serve </code>
+
 
 
 
